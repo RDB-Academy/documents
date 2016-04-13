@@ -10,3 +10,4 @@
 | mail           |   X    |
 | password       |   -    |
 | profilePicture |   -    |
+|
