@@ -18,13 +18,12 @@ this document lists all features that are be implemented.
 - **a working user delete function**
   - the user will be first disabled and reactivate his profile in a period of 14 days, after this period the account will be irrevocable deleted
 - url routing
+- achievement system
+- task tip system
+- friend system
 
 ### Maybe
-- achievement system
-- friend system
-  - real name
-- task tip system
-- internationalization - German / English
+
 
 ## SQL Module
 ### Must be implemented
