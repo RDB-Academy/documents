@@ -77,12 +77,20 @@ So selected users can test and try out some modules which are not ready to be av
 ### Permissions
 | Field           | Unique  | Description     |
 |----------------:|:-------:|:----------------|
+|
 
 
 ### Profile Pictures
-| Field           | Unique  | Description     |
-|----------------:|:-------:|:----------------|
-
+| Field             | Unique  | Description                     |
+|------------------:|:-------:|:--------------------------------|
+| profilePictureID  |   PK    | identifier of profile picture   |
+| name              |   -     | the name of the profile picture |
+| url               |   -     | the path to the profile picture |
+| cssAttributes     |   -     | additional css attributes       |
+| createdAt         |   -     | DateTime of creation            |
+| createdBy         |   -     | Foreign Key to User             |
+| updatedAt         |   -     | DateTie of last update          |
+| updatedBy         |   -     | Foreign Key to User             |
 
 ### Settings
 

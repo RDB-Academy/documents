@@ -28,7 +28,7 @@ this document lists all features that are be implemented.
 
 ## SQL Module
 ### Must be implemented
-- rebuild of the old alchemist
+- rebuild of the sql alchemist front-end
 -
 
 ### Maybe
