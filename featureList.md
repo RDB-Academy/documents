@@ -8,6 +8,7 @@ this document lists all features that are be implemented.
 - modularity
 - taskset versioning
 - task keyword selection
+- activity feed
 - concurrency
 - profile pictures
 - in game avatars

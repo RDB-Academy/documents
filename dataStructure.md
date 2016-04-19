@@ -50,6 +50,10 @@ So selected users can test and try out some modules which are not ready to be av
 | userID            |   PK    |
 | moduleID          |   PK    |
 
+### Activity
+| Field             | Unique  | Description |
+|------------------:|:-------:|:------------|
+|
 
 ### Group
 | Field           | Unique  | Description           |
