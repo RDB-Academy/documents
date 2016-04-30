@@ -13,17 +13,18 @@
 ### User
 This entity represents a user.
 
-| Field           | Unique | Description                              |
-|----------------:|:------:|:-----------------------------------------|
-| userID          |   PK   | Identifier of User                       |
-| username        |   X    | Unique username                          |
-| mail            |   X    | Unique E-Mail address                    |
-| password        |   -    | This field contains the hashed password  |
-| profilePicture  |   -    | Foreign Key to ProfilePicture            |
-| disabledAt      |        | DateTime when the user was disabledAt    |
-| createdAt       |   -    | DateTime of the creation                 |
-| updatedAt       |   -    | DateTime of the last update              |
-| updatedBy       |   -    | Foreign Key to User                      |
+| Field                 | Unique | Description                              |
+|----------------------:|:------:|:-----------------------------------------|
+| userID                |   PK   | Identifier of User                       |
+| username              |   X    | Unique username                          |
+| mail                  |   X    | Unique E-Mail address                    |
+| password              |   -    | This field contains the hashed password  |
+| profilePicture        |   -    | Foreign Key to ProfilePicture            |
+| profilePictureBorder  |   -    | Foreign Key to ProfilePictureBorder      |
+| disabledAt            |        | DateTime when the user was disabledAt    |
+| createdAt             |   -    | DateTime of the creation                 |
+| updatedAt             |   -    | DateTime of the last update              |
+| updatedBy             |   -    | Foreign Key to User                      |
 
 ### Module
 | Field             | Unique  | Description                                   |
@@ -33,7 +34,7 @@ This entity represents a user.
 | URL               |   X     |                                               |
 | releaseDate       |   -     |                                               |
 | isAvailable       |   -     | a boolean flag if is the module is available  |
-| inTestingPeriod   |   -     | a boolean flag if is it in an testing period  |
+| inTesting         |   -     | a boolean flag if is it in an testing period  |
 | logo              |   -     | Path to Logo                                  |
 | version           |   -     | version of the module                         |
 | createdAt         |   -     | DateTime of creation                          |
@@ -41,19 +42,9 @@ This entity represents a user.
 | updatedAt         |   -     | DateTime of last update                       |
 | updatedBy         |   -     | Foreign Key to User                           |
 
-### ModuleUserAccess
-This entity regulate the access to the modules from the users.
-So selected users can test and try out some modules which are not ready to be available to public access.
 
-| Field             | Unique  | Description |
-|------------------:|:-------:|:------------|
-| userID            |   PK    |
-| moduleID          |   PK    |
-
-### Activity
-| Field             | Unique  | Description |
-|------------------:|:-------:|:------------|
-|
+### Features
+### Session 
 
 ### Group
 | Field           | Unique  | Description           |
@@ -78,18 +69,24 @@ So selected users can test and try out some modules which are not ready to be av
 | updatedAt       |   -    |
 | updatedBy       |   -    |
 
-### Permissions
-| Field           | Unique  | Description     |
-|----------------:|:-------:|:----------------|
-|
-
-
 ### Profile Pictures
 | Field             | Unique  | Description                     |
 |------------------:|:-------:|:--------------------------------|
 | profilePictureID  |   PK    | identifier of profile picture   |
 | name              |   -     | the name of the profile picture |
 | url               |   -     | the path to the profile picture |
+| cssAttributes     |   -     | additional css attributes       |
+| createdAt         |   -     | DateTime of creation            |
+| createdBy         |   -     | Foreign Key to User             |
+| updatedAt         |   -     | DateTie of last update          |
+| updatedBy         |   -     | Foreign Key to User             |
+
+### Profile Picture Borders
+| Field             | Unique  | Description                     |
+|------------------:|:-------:|:--------------------------------|
+| pictureBorderID   |   PK    | identifier                      |
+| name              |   -     | the name                        |
+| url               |   -     | the path                        |
 | cssAttributes     |   -     | additional css attributes       |
 | createdAt         |   -     | DateTime of creation            |
 | createdBy         |   -     | Foreign Key to User             |
