@@ -17,11 +17,12 @@ This entity represents a user.
 |----------------------:|:------:|:-----------------------------------------|
 | userID                |   PK   | Identifier of User                       |
 | username              |   X    | Unique username                          |
+| yNo                   |   X    | Unique username                          |
 | mail                  |   X    | Unique E-Mail address                    |
 | password              |   -    | This field contains the hashed password  |
 | profilePicture        |   -    | Foreign Key to ProfilePicture            |
 | profilePictureBorder  |   -    | Foreign Key to ProfilePictureBorder      |
-| disabledAt            |        | DateTime when the user was disabledAt    |
+| disabledAt            |   -    | DateTime when the user was disabledAt    |
 | createdAt             |   -    | DateTime of the creation                 |
 | updatedAt             |   -    | DateTime of the last update              |
 | updatedBy             |   -    | Foreign Key to User                      |
@@ -31,6 +32,7 @@ This entity represents a user.
 |------------------:|:-------:|:----------------------------------------------|
 | moduleID          |   PK    | identifier of module                          |
 | name              |   X     | unique name of the trainer                    |
+| Description       |   -     |                                               |
 | URL               |   X     |                                               |
 | releaseDate       |   -     |                                               |
 | isAvailable       |   -     | a boolean flag if is the module is available  |
@@ -43,8 +45,35 @@ This entity represents a user.
 | updatedBy         |   -     | Foreign Key to User                           |
 
 
-### Features
-### Session 
+### Achievements
+| Field             | Unique  | Description                                   |
+|------------------:|:-------:|:----------------------------------------------|
+| achievementID       |   PK    | identifier of achievements                  |
+| name                |   X     |                                             |
+| description         |   -     |                     |
+| logo                |   -     |                     |
+| points              |   -     |                     |
+| module              |   -     |                     |
+| AchievementCategory |   -     |                     |
+| start               |   -     |                     |
+| stop                |   -     |                     |
+| inTest              |   -     |                     |
+
+### Rewards
+| Field             | Unique  | Description                                   |
+|------------------:|:-------:|:----------------------------------------------|
+| achievementID     |   FK    |                   |
+| rewardID          |   PK    |                   |
+| name              |   X     |                                             |
+| description       |   -     |                     |
+| logo              |   -     |                     |
+| rewardCategory    |   -     |                     |
+
+### UserAchievements
+### UserRewards
+### Role
+###
+### Session
 
 ### Group
 | Field           | Unique  | Description           |
@@ -54,10 +83,8 @@ This entity represents a user.
 | leader          |   -     | Foreign Key to User   |
 | createdAt       |   -     | DateTime of creation  |
 | createdBy       |   -     | Foreign Key to User   |
-| updatedAt       |   -     | DateTime of creation  |
+| updatedAt       |   -     | DateTime of update    |
 | updatedBy       |   -     | Foreign Key to User   |
-
-
 
 ### UserGroupRelation
 | Field           | Unique |
